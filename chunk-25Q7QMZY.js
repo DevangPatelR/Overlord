@@ -1,1 +1,0 @@
-import{I as n,Q as m,e as t,p as i}from"./chunk-ANYO2XVE.js";var f=[],e=class o{static \u0275fac=function(r){return new(r||o)};static \u0275mod=i({type:o});static \u0275inj=t({imports:[m.forChild(f),m]})};var c=class o{static \u0275fac=function(r){return new(r||o)};static \u0275mod=i({type:o});static \u0275inj=t({imports:[n,e]})};export{c as EducationModule};
