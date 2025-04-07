@@ -25,10 +25,12 @@
 /* Apply base styles to body */
 body.religious-theme {
   background-color: var(--religious-bg-primary);
-  background-image: url('/Overlord/assets/images/sacred-geometry-pattern.svg');
+  background-image: url('/assets/images/sacred-geometry-pattern.svg'),
+                    url('/Overlord/assets/images/sacred-geometry-pattern.svg');
   background-attachment: fixed;
-  background-size: cover;
-  background-blend-mode: overlay;
+  background-size: 120% 120%;
+  background-position: center;
+  background-blend-mode: soft-light;
   color: var(--religious-text-primary);
   transition: all 0.3s ease;
 }
@@ -41,8 +43,7 @@ body.religious-theme::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%238B4513' stroke-width='0.8' stroke-opacity='0.1'%3E%3Ccircle cx='50' cy='50' r='40'/%3E%3Ccircle cx='50' cy='50' r='35'/%3E%3Ccircle cx='50' cy='50' r='30'/%3E%3Ccircle cx='50' cy='50' r='25'/%3E%3Ccircle cx='50' cy='50' r='20'/%3E%3Ccircle cx='50' cy='50' r='15'/%3E%3C/g%3E%3C/svg%3E");
-  opacity: 0.3;
+  background: radial-gradient(circle at center, rgba(255, 153, 51, 0.1) 0%, rgba(139, 69, 19, 0.05) 70%, transparent 100%);
   z-index: -1;
   pointer-events: none;
 }
@@ -673,6 +674,112 @@ body.religious-theme::before {
   background-color: transparent !important;
 }
 
+/* Company card styling for experience section */
+.religious-theme .company-card {
+  background-color: var(--religious-card-bg) !important;
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  border-radius: var(--religious-border-radius);
+  box-shadow: var(--religious-box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;  /* Increased padding from default */
+}
+
+.religious-theme .company-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(139, 69, 19, 0.2);
+}
+
+.religious-theme .company-card .company-name {
+  font-family: 'Samarkan', 'Cinzel', serif;
+  color: var(--religious-accent-primary);
+  margin-bottom: 1rem;
+  background-color: transparent !important;
+}
+
+.religious-theme .company-card .job-title {
+  color: var(--religious-text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background-color: transparent !important;
+}
+
+.religious-theme .company-card .job-location {
+  color: var(--religious-text-primary);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  background-color: transparent !important;
+}
+
+.religious-theme .company-card .job-details {
+  padding: 0.5rem 0;
+  background-color: transparent !important;
+}
+
+.religious-theme .company-card .job-details p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.religious-theme .company-card .job-details h4 {
+  margin: 1.25rem 0 0.75rem;
+  color: var(--religious-accent-primary);
+}
+
+.religious-theme .company-card .job-details ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.religious-theme .company-card .job-details li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.religious-theme .company-card .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.religious-theme .company-card .tech-tag {
+  background-color: rgba(139, 69, 19, 0.1) !important;
+  color: var(--religious-text-primary);
+  border: 1px solid rgba(139, 69, 19, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Force background color on all company card children */
+.religious-theme .company-card * {
+  background-color: transparent !important;
+}
+
+/* Timeline content styling */
+.religious-theme .timeline-content {
+  padding: 0.5rem;
+  background-color: transparent !important;
+}
+
+/* Timeline item styling */
+.religious-theme .timeline-item {
+  margin-bottom: 2rem;
+  background-color: transparent !important;
+}
+
+/* Timeline date styling */
+.religious-theme .timeline-date {
+  background-color: var(--religious-accent-primary) !important;
+  color: var(--religious-bg-primary) !important;
+  padding: 0.5rem 1rem;
+  border-radius: var(--religious-border-radius);
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: 'Samarkan', 'Cinzel', serif;
+}
+
 /* Override any inline styles except for specific components */
 .religious-theme [style*="background-color"]:not(.company-card):not(.company-card *):not(.highlight-card):not(.highlight-card *):not(.project-card):not(.project-card *):not(.education-item):not(.education-item *):not(.skill-category):not(.skill-category *):not(.certifications-section):not(.certifications-section *):not(.contact-form):not(.contact-form *) {
   background-color: var(--religious-bg-primary) !important;
@@ -734,6 +841,36 @@ body.religious-theme::before {
   background-color: transparent !important;
 }
 
+/* Decorative elements */
+.religious-theme .container::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%238B4513' fill-opacity='0.15' d='M50,0 C60,30 80,50 100,50 C80,50 60,70 50,100 C40,70 20,50 0,50 C20,50 40,30 50,0 Z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.religious-theme .container::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%238B4513' fill-opacity='0.15' d='M50,0 C60,30 80,50 100,50 C80,50 60,70 50,100 C40,70 20,50 0,50 C20,50 40,30 50,0 Z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .religious-theme h1 {
@@ -773,7 +910,8 @@ body.religious-theme::before {
 /* Add font imports */
 @font-face {
   font-family: 'Samarkan';
-  src: url('/Overlord/assets/fonts/samarkan.TTF') format('truetype');
+  src: url('/assets/fonts/samarkan.TTF') format('truetype'),
+       url('/Overlord/assets/fonts/samarkan.TTF') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -781,8 +919,68 @@ body.religious-theme::before {
 
 @font-face {
   font-family: 'Prakrta';
-  src: url('/Overlord/assets/fonts/prakrta_.ttf') format('truetype');
+  src: url('/assets/fonts/prakrta_.ttf') format('truetype'),
+       url('/Overlord/assets/fonts/prakrta_.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+/* Ensure all text in the theme has the correct color */
+.religious-theme div,
+.religious-theme span,
+.religious-theme p {
+  color: var(--religious-text-primary) !important;
+}
+
+.religious-theme a {
+  color: var(--religious-accent-primary) !important;
+  transition: color 0.3s ease;
+}
+
+.religious-theme a:hover {
+  color: var(--religious-accent-secondary) !important;
+}
+
+.religious-theme h1,
+.religious-theme h2 {
+  color: var(--religious-accent-primary) !important;
+}
+
+.religious-theme .timeline-date span {
+  color: var(--religious-bg-primary) !important;
+}
+
+.religious-theme .cta-buttons .btn-primary {
+  background-color: var(--religious-accent-primary) !important;
+  color: var(--religious-bg-primary) !important;
+  border-color: var(--religious-accent-primary) !important;
+}
+
+.religious-theme .cta-buttons .btn-secondary {
+  background-color: transparent !important;
+  color: var(--religious-accent-primary) !important;
+  border-color: var(--religious-accent-primary) !important;
+}
+
+.religious-theme .cta-buttons .btn-primary:hover {
+  background-color: #78493C !important;
+  border-color: #78493C !important;
+}
+
+.religious-theme .cta-buttons .btn-secondary:hover {
+  background-color: var(--religious-accent-secondary) !important;
+  color: var(--religious-bg-primary) !important;
+  border-color: var(--religious-accent-secondary) !important;
+}
+
+.religious-theme .view-all-link {
+  color: var(--religious-accent-primary) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.religious-theme .view-all-link:hover {
+  color: var(--religious-accent-secondary) !important;
+  text-decoration: underline;
 }
