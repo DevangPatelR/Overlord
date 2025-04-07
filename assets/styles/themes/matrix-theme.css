@@ -1,0 +1,249 @@
+/* Matrix Theme CSS */
+.matrix-theme {
+  --background-color: #000000;
+  --card-bg: rgba(0, 15, 0, 0.8);
+  --text-color: #00ff41;
+  --text-color-light: #00cc33;
+  --text-color-secondary: #00cc33;
+  --border-color: #00ff41;
+  --hover-bg: rgba(0, 255, 65, 0.1);
+  
+  --primary-color: #00ff41;
+  --primary-color-light: rgba(0, 255, 65, 0.1);
+  --primary-color-dark: #008f11;
+  --secondary-color: #008f11;
+  --accent-color: #03a062;
+  
+  --nav-bg: rgba(0, 10, 0, 0.9);
+  --nav-text: #00ff41;
+  --nav-hover: #03a062;
+  --footer-bg: rgba(0, 10, 0, 0.9);
+  --footer-text: #00ff41;
+  
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+}
+
+/* Digital Rain Effect - Canvas will be added via JavaScript */
+.matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* CRT Scan Line Effect */
+.matrix-theme::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.9) 50%);
+  background-size: 100% 4px;
+  z-index: -1;
+}
+
+/* Matrix Rain Animation */
+@keyframes matrix-rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.matrix-theme::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="2000" viewBox="0 0 200 2000"><style>@keyframes fall{0%{transform:translateY(-2000px)}to{transform:translateY(0)}}</style><g fill="rgba(0,255,65,0.15)"><text x="10" y="30" style="animation:fall 10s linear infinite;animation-delay:0s">01001</text><text x="30" y="50" style="animation:fall 15s linear infinite;animation-delay:0.5s">10101</text><text x="50" y="70" style="animation:fall 12s linear infinite;animation-delay:1s">01011</text><text x="70" y="90" style="animation:fall 14s linear infinite;animation-delay:1.5s">11001</text><text x="90" y="110" style="animation:fall 13s linear infinite;animation-delay:2s">10110</text><text x="110" y="130" style="animation:fall 11s linear infinite;animation-delay:2.5s">01101</text><text x="130" y="150" style="animation:fall 16s linear infinite;animation-delay:3s">10011</text><text x="150" y="170" style="animation:fall 12s linear infinite;animation-delay:3.5s">01010</text><text x="170" y="190" style="animation:fall 15s linear infinite;animation-delay:4s">11010</text></g></svg>');
+  background-size: 200% 200%;
+  z-index: -1;
+  animation: matrix-rain 30s linear infinite;
+  opacity: 0.3;
+}
+
+/* Matrix Theme Specific Styles */
+.matrix-theme .navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.matrix-theme .navbar-brand,
+.matrix-theme .nav-link {
+  color: var(--nav-text);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+.matrix-theme .nav-link:hover {
+  color: var(--nav-hover);
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.matrix-theme .page-title,
+.matrix-theme .section-title {
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.matrix-theme .skill-category,
+.matrix-theme .experience-card,
+.matrix-theme .certification-item {
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+}
+
+.matrix-theme .skill-category:hover,
+.matrix-theme .experience-card:hover,
+.matrix-theme .certification-item:hover {
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.matrix-theme .skill-level {
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.matrix-theme .category-title,
+.matrix-theme .company-name,
+.matrix-theme .job-title {
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+.matrix-theme a {
+  color: var(--primary-color);
+  text-shadow: 0 0 3px var(--primary-color);
+}
+
+.matrix-theme a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+.matrix-theme button {
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.matrix-theme button:hover {
+  background-color: rgba(0, 255, 65, 0.1);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.matrix-theme .header {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.matrix-theme .logo a {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+}
+
+.matrix-theme .logo a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--accent-color);
+}
+
+.matrix-theme .nav-list a {
+  color: var(--nav-text);
+  text-shadow: 0 0 3px var(--primary-color);
+}
+
+.matrix-theme .nav-list a:hover,
+.matrix-theme .nav-list a.active {
+  color: var(--nav-hover);
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
+.matrix-theme .nav-list a.active::after {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.matrix-theme .footer {
+  background-color: var(--footer-bg);
+  border-top: 1px solid var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.matrix-theme .footer-content {
+  color: var(--footer-text);
+}
+
+.matrix-theme .social-links a {
+  color: var(--primary-color);
+  text-shadow: 0 0 3px var(--primary-color);
+}
+
+.matrix-theme .social-links a:hover {
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+/* Typing cursor effect for text */
+.matrix-theme .typing-effect {
+  border-right: 2px solid var(--primary-color);
+  animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--primary-color); }
+}
+
+/* Glitch effect for headings */
+.matrix-theme .glitch-effect {
+  position: relative;
+}
+
+.matrix-theme .glitch-effect::before,
+.matrix-theme .glitch-effect::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0);
+}
+
+.matrix-theme .glitch-effect::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--accent-color);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.matrix-theme .glitch-effect::after {
+  left: -2px;
+  text-shadow: 1px 0 var(--secondary-color);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip: rect(0, 900px, 5px, 0); }
+  20% { clip: rect(0, 900px, 5px, 0); }
+  20.1% { clip: rect(0, 900px, 0, 0); }
+  100% { clip: rect(0, 900px, 0, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(0, 900px, 0, 0); }
+  45% { clip: rect(0, 900px, 0, 0); }
+  45.1% { clip: rect(0, 900px, 10px, 0); }
+  70% { clip: rect(0, 900px, 10px, 0); }
+  70.1% { clip: rect(0, 900px, 0, 0); }
+  100% { clip: rect(0, 900px, 0, 0); }
+}

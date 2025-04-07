@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Lotus Decoration</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(50.000000, 50.000000)">
+            <!-- Center circle -->
+            <circle cx="0" cy="0" r="8" fill="#F9E076" opacity="0.8"></circle>
+            
+            <!-- Lotus petals -->
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7"></path>
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7" transform="rotate(45)"></path>
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7" transform="rotate(90)"></path>
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7" transform="rotate(135)"></path>
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7" transform="rotate(180)"></path>
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7" transform="rotate(225)"></path>
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7" transform="rotate(270)"></path>
+            <path d="M0,-10 C10,-5 15,15 0,25 C-15,15 -10,-5 0,-10 Z" fill="#F77FBE" stroke="#0A6EB4" stroke-width="0.5" opacity="0.7" transform="rotate(315)"></path>
+            
+            <!-- Outer decorative elements -->
+            <circle cx="0" cy="-40" r="3" fill="#FF9933" opacity="0.6"></circle>
+            <circle cx="28.28" cy="-28.28" r="3" fill="#FF9933" opacity="0.6"></circle>
+            <circle cx="40" cy="0" r="3" fill="#FF9933" opacity="0.6"></circle>
+            <circle cx="28.28" cy="28.28" r="3" fill="#FF9933" opacity="0.6"></circle>
+            <circle cx="0" cy="40" r="3" fill="#FF9933" opacity="0.6"></circle>
+            <circle cx="-28.28" cy="28.28" r="3" fill="#FF9933" opacity="0.6"></circle>
+            <circle cx="-40" cy="0" r="3" fill="#FF9933" opacity="0.6"></circle>
+            <circle cx="-28.28" cy="-28.28" r="3" fill="#FF9933" opacity="0.6"></circle>
+        </g>
+    </g>
+</svg>

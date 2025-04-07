@@ -1,0 +1,547 @@
+/* Hacker Theme CSS */
+.hacker-theme {
+  --background-color: #0d0208;
+  --card-bg: #1a1a1a;
+  --text-color: #00ff41;
+  --text-color-amber: #ffbf00;
+  --text-color-secondary: #008f11;
+  --border-color: #008f11;
+  --hover-bg: rgba(0, 143, 17, 0.2);
+  
+  --primary-color: #008f11;
+  --primary-color-light: rgba(0, 143, 17, 0.1);
+  --primary-color-dark: #003b00;
+  --secondary-color: #003b00;
+  --accent-color: #00ff41;
+  
+  --nav-bg: #0d0208;
+  --nav-text: #00ff41;
+  --nav-hover: #ffbf00;
+  --footer-bg: #0d0208;
+  --footer-text: #00ff41;
+  
+  --hacker-bg: #0d0208;
+  --hacker-card-bg: #1a1a1a;
+  --hacker-text: #00ff41;
+  --hacker-text-amber: #ffbf00;
+  --hacker-primary: #008f11;
+  --hacker-accent: #003b00;
+  --hacker-shadow: rgba(0, 143, 17, 0.5);
+  --hacker-border: #008f11;
+  
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Courier New', monospace;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Terminal-style interface */
+.hacker-theme .card,
+.hacker-theme .section {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 143, 17, 0.3);
+  position: relative;
+}
+
+.hacker-theme .card::before,
+.hacker-theme .section::before {
+  content: ">";
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.hacker-theme .card-title,
+.hacker-theme .section-title {
+  color: var(--text-color-amber);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  padding-left: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Header and Navigation */
+.hacker-theme .header {
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 0 10px rgba(0, 143, 17, 0.3);
+}
+
+.hacker-theme .logo a {
+  color: var(--text-color-amber);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.hacker-theme .logo a::before {
+  content: "root@overlord:~$ ";
+  color: var(--primary-color);
+}
+
+.hacker-theme .nav-list {
+  font-family: 'Courier New', monospace;
+}
+
+.hacker-theme .nav-list a {
+  color: var(--nav-text);
+  position: relative;
+}
+
+.hacker-theme .nav-list a::before {
+  content: "cd ";
+  color: var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hacker-theme .nav-list a:hover::before,
+.hacker-theme .nav-list a.active::before {
+  opacity: 1;
+}
+
+.hacker-theme .nav-list a:hover,
+.hacker-theme .nav-list a.active {
+  color: var(--nav-hover);
+}
+
+.hacker-theme .nav-list a.active::after {
+  background-color: var(--nav-hover);
+}
+
+/* Footer */
+.hacker-theme .footer {
+  background-color: var(--footer-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+.hacker-theme .footer-content {
+  font-family: 'Courier New', monospace;
+}
+
+.hacker-theme .copyright::before {
+  content: "# ";
+  color: var(--primary-color);
+}
+
+.hacker-theme .social-links a {
+  color: var(--primary-color);
+}
+
+.hacker-theme .social-links a:hover {
+  color: var(--text-color-amber);
+}
+
+/* Buttons and Form Elements */
+.hacker-theme button,
+.hacker-theme .btn {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  font-family: 'Courier New', monospace;
+  position: relative;
+  padding-left: 20px;
+}
+
+.hacker-theme button::before,
+.hacker-theme .btn::before {
+  content: ">";
+  position: absolute;
+  left: 8px;
+  color: var(--primary-color);
+}
+
+.hacker-theme button:hover,
+.hacker-theme .btn:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-color-amber);
+}
+
+/* Typing animation for text */
+.hacker-theme .typing-effect {
+  border-right: 2px solid var(--text-color);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--text-color) }
+}
+
+/* Command-line style elements */
+.hacker-theme .command-line {
+  position: relative;
+  padding-left: 20px;
+  line-height: 1.5;
+}
+
+.hacker-theme .command-line::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* Monospace fonts for all text */
+.hacker-theme h1, 
+.hacker-theme h2, 
+.hacker-theme h3, 
+.hacker-theme h4, 
+.hacker-theme h5, 
+.hacker-theme h6,
+.hacker-theme p,
+.hacker-theme span,
+.hacker-theme div {
+  font-family: 'Courier New', monospace;
+}
+
+/* Terminal cursor effect */
+.hacker-theme .cursor-effect::after {
+  content: "_";
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Links */
+.hacker-theme a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.hacker-theme a:hover {
+  color: var(--text-color-amber);
+}
+
+/* Scrollbar */
+.hacker-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hacker-theme::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+.hacker-theme::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.hacker-theme::-webkit-scrollbar-thumb:hover {
+  background: var(--text-color);
+}
+
+/* Console background container */
+.hacker-console-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Console line styles */
+.console-line {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Command line background style */
+.command-line-bg {
+  color: rgba(0, 255, 65, 0.3);
+}
+
+/* Response line background style */
+.response-line-bg {
+  color: rgba(255, 191, 0, 0.3);
+}
+
+/* Ensure content appears above the console background */
+.hacker-theme .container,
+.hacker-theme header,
+.hacker-theme footer,
+.hacker-theme main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card styling */
+.hacker-theme .card {
+  background-color: var(--hacker-card-bg);
+  border: 1px solid var(--hacker-border);
+  box-shadow: 0 0 10px var(--hacker-shadow);
+  border-radius: 0;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hacker-theme .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background-color: var(--hacker-accent);
+  border-bottom: 1px solid var(--hacker-border);
+}
+
+.hacker-theme .card::after {
+  content: "$ system.info";
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  color: var(--hacker-text);
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+/* Headings */
+.hacker-theme h1,
+.hacker-theme h2,
+.hacker-theme h3,
+.hacker-theme h4,
+.hacker-theme h5,
+.hacker-theme h6 {
+  color: var(--hacker-text);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hacker-theme h1::before,
+.hacker-theme h2::before,
+.hacker-theme h3::before,
+.hacker-theme h4::before,
+.hacker-theme h5::before,
+.hacker-theme h6::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--hacker-primary);
+}
+
+/* Links */
+.hacker-theme a {
+  color: var(--hacker-text-amber);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hacker-theme a:hover {
+  color: var(--hacker-text);
+  text-decoration: none;
+}
+
+.hacker-theme a:hover::before {
+  content: "cd ";
+  color: var(--hacker-primary);
+}
+
+/* Navigation */
+.hacker-theme nav {
+  background-color: var(--hacker-card-bg);
+  border-bottom: 1px solid var(--hacker-border);
+}
+
+.hacker-theme .nav-link {
+  color: var(--hacker-text);
+  font-family: 'Courier New', monospace;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.hacker-theme .nav-link::before {
+  content: "$";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--hacker-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hacker-theme .nav-link:hover::before {
+  opacity: 1;
+}
+
+.hacker-theme .nav-link.active {
+  color: var(--hacker-text-amber);
+  background-color: transparent;
+}
+
+.hacker-theme .nav-link.active::before {
+  content: ">";
+  opacity: 1;
+}
+
+/* Buttons */
+.hacker-theme .btn {
+  background-color: var(--hacker-accent);
+  color: var(--hacker-text);
+  border: 1px solid var(--hacker-border);
+  border-radius: 0;
+  font-family: 'Courier New', monospace;
+  text-transform: lowercase;
+  position: relative;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.hacker-theme .btn::before {
+  content: "run";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--hacker-primary);
+  font-size: 0.8rem;
+}
+
+.hacker-theme .btn:hover {
+  background-color: var(--hacker-primary);
+  color: var(--hacker-bg);
+}
+
+/* Form elements */
+.hacker-theme input,
+.hacker-theme textarea,
+.hacker-theme select {
+  background-color: var(--hacker-bg);
+  color: var(--hacker-text);
+  border: 1px solid var(--hacker-border);
+  border-radius: 0;
+  font-family: 'Courier New', monospace;
+  padding: 0.5rem;
+}
+
+.hacker-theme input:focus,
+.hacker-theme textarea:focus,
+.hacker-theme select:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--hacker-shadow);
+  border-color: var(--hacker-primary);
+}
+
+/* Tables */
+.hacker-theme table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hacker-theme th,
+.hacker-theme td {
+  padding: 0.75rem;
+  border: 1px solid var(--hacker-border);
+}
+
+.hacker-theme th {
+  background-color: var(--hacker-accent);
+  color: var(--hacker-text);
+  text-align: left;
+}
+
+/* Command line style */
+.hacker-theme .command-line {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.hacker-theme .command-line::before {
+  content: "$";
+  position: absolute;
+  left: 0;
+  color: var(--hacker-primary);
+}
+
+/* Typing animation */
+.hacker-theme .typing-effect {
+  position: relative;
+  border-right: 0.15em solid var(--hacker-text);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Cursor effect */
+.hacker-theme .cursor-effect {
+  position: relative;
+}
+
+.hacker-theme .cursor-effect::after {
+  content: "_";
+  position: absolute;
+  right: -0.6em;
+  color: var(--hacker-text);
+  animation: blink-cursor 0.75s step-end infinite;
+}
+
+/* Logo styling */
+.hacker-theme .logo a {
+  color: var(--hacker-text-amber);
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.hacker-theme .logo a:hover {
+  color: var(--hacker-text);
+}
+
+.hacker-theme .logo a:hover::before {
+  content: "";
+}
+
+/* Animations */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--hacker-text); }
+}
+
+@keyframes blink-cursor {
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* Scrollbar */
+.hacker-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+.hacker-theme::-webkit-scrollbar-track {
+  background: var(--hacker-bg);
+}
+
+.hacker-theme::-webkit-scrollbar-thumb {
+  background: var(--hacker-primary);
+  border-radius: 0;
+}
+
+.hacker-theme::-webkit-scrollbar-thumb:hover {
+  background: var(--hacker-text);
+}
