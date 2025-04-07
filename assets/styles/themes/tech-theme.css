@@ -1,0 +1,1708 @@
+/* Tech Theme CSS - Modern design with circuit board patterns */
+
+:root {
+  /* Base colors - Dark version */
+  --tech-bg-primary: #121a29;
+  --tech-bg-secondary: #1e2a3e;
+  --tech-text-primary: #e0e6f0;
+  --tech-text-secondary: #a0aec0;
+  
+  /* Accent colors */
+  --tech-accent-primary: #4a90e2;
+  --tech-accent-secondary: #5cb3fd;
+  --tech-accent-tertiary: #00c8ff;
+  --tech-accent-quaternary: #6c7ae0;
+  
+  /* UI Elements */
+  --tech-border-radius: 6px;
+  --tech-transition-speed: 0.3s;
+  --tech-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --tech-card-bg: rgba(30, 42, 62, 0.95);
+  --tech-header-bg: rgba(18, 26, 41, 0.98);
+  --tech-footer-bg: rgba(18, 26, 41, 0.8);
+}
+
+/* Apply base styles to body */
+body.tech-theme {
+  background-color: var(--tech-bg-primary);
+  background-image: 
+    linear-gradient(rgba(18, 30, 50, 0.97) 2px, transparent 2px),
+    linear-gradient(90deg, rgba(18, 30, 50, 0.97) 2px, transparent 2px),
+    linear-gradient(rgba(74, 144, 226, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 144, 226, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-position: center;
+  background-blend-mode: soft-light;
+  color: var(--tech-text-primary);
+  transition: all 0.3s ease;
+  font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+/* Circuit and Code Background Effects */
+.tech-theme {
+  position: relative;
+}
+
+/* Circuit Board Background Pattern */
+.tech-theme::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(18, 30, 50, 0.97), rgba(18, 30, 50, 0.97)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%234a90e2' stroke-width='0.5' stroke-opacity='0.2'%3E%3Cpath d='M0,0 L100,0 L100,100 L0,100 Z'/%3E%3Cpath d='M20,0 L20,100'/%3E%3Cpath d='M40,0 L40,100'/%3E%3Cpath d='M60,0 L60,100'/%3E%3Cpath d='M80,0 L80,100'/%3E%3Cpath d='M0,20 L100,20'/%3E%3Cpath d='M0,40 L100,40'/%3E%3Cpath d='M0,60 L100,60'/%3E%3Cpath d='M0,80 L100,80'/%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3Ccircle cx='40' cy='20' r='2'/%3E%3Ccircle cx='60' cy='20' r='2'/%3E%3Ccircle cx='80' cy='20' r='2'/%3E%3Ccircle cx='20' cy='40' r='2'/%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3Ccircle cx='60' cy='40' r='2'/%3E%3Ccircle cx='80' cy='40' r='2'/%3E%3Ccircle cx='20' cy='60' r='2'/%3E%3Ccircle cx='40' cy='60' r='2'/%3E%3Ccircle cx='60' cy='60' r='2'/%3E%3Ccircle cx='80' cy='60' r='2'/%3E%3Ccircle cx='20' cy='80' r='2'/%3E%3Ccircle cx='40' cy='80' r='2'/%3E%3Ccircle cx='60' cy='80' r='2'/%3E%3Ccircle cx='80' cy='80' r='2'/%3E%3Cpath d='M20,20 L40,40'/%3E%3Cpath d='M60,20 L80,40'/%3E%3Cpath d='M20,60 L40,80'/%3E%3Cpath d='M60,60 L80,80'/%3E%3Cpath d='M40,20 L60,40'/%3E%3Cpath d='M20,40 L40,60'/%3E%3Cpath d='M60,40 L80,60'/%3E%3Cpath d='M40,60 L60,80'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: -2;
+  opacity: 0.7;
+}
+
+/* Animated Code Lines */
+.tech-theme::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, transparent 0%, transparent 99%, rgba(74, 144, 226, 0.2) 100%),
+    linear-gradient(0deg, transparent 0%, transparent 99%, rgba(74, 144, 226, 0.2) 100%);
+  background-size: 50px 50px;
+  animation: backgroundScroll 20s linear infinite;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+@keyframes backgroundScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50px 50px;
+  }
+}
+
+/* Add floating code snippets */
+.tech-theme body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Ctext x='10' y='20' font-family='monospace' font-size='10' fill='%234a90e2' fill-opacity='0.2'%3Efunction init() {%3C/text%3E%3Ctext x='10' y='35' font-family='monospace' font-size='10' fill='%234a90e2' fill-opacity='0.2'%3E  return new Promise(resolve => {%3C/text%3E%3Ctext x='10' y='50' font-family='monospace' font-size='10' fill='%234a90e2' fill-opacity='0.2'%3E    const data = loadConfig();%3C/text%3E%3Ctext x='10' y='65' font-family='monospace' font-size='10' fill='%234a90e2' fill-opacity='0.2'%3E    if (data.status === 'ok') {%3C/text%3E%3Ctext x='10' y='80' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E      startSystem(data);%3C/text%3E%3Ctext x='10' y='95' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E      resolve(true);%3C/text%3E%3Ctext x='10' y='110' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E  });%3C/text%3E%3Ctext x='10' y='125' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E}%3C/text%3E%3Ctext x='10' y='140' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3Eclass System {%3C/text%3E%3Ctext x='10' y='155' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E  constructor() {%3C/text%3E%3Ctext x='10' y='170' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E    this.modules = [];%3C/text%3E%3Ctext x='10' y='185' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E    this.status = 'idle';%3C/text%3E%3Ctext x='10' y='200' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E  }%3C/text%3E%3Ctext x='10' y='215' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E  // TODO: Implement%3C/text%3E%3Ctext x='10' y='230' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E}%3C/text%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='120' viewBox='0 0 250 120'%3E%3Ctext x='10' y='20' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3Eclass System {%3C/text%3E%3Ctext x='10' y='35' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E  constructor() {%3C/text%3E%3Ctext x='10' y='50' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E    this.modules = [];%3C/text%3E%3Ctext x='10' y='65' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E    this.status = 'idle';%3C/text%3E%3Ctext x='10' y='80' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E  }%3C/text%3E%3Ctext x='10' y='95' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E  // TODO: Implement%3C/text%3E%3Ctext x='10' y='110' font-family='monospace' font-size='10' fill='%2300c8ff' fill-opacity='0.15'%3E}%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 
+    calc(100% - 50px) 100px,
+    50px calc(100% - 80px);
+  animation: floatCode 60s linear infinite;
+}
+
+@keyframes floatCode {
+  0% {
+    background-position: 
+      calc(100% - 50px) 100px,
+      50px calc(100% - 80px);
+  }
+  25% {
+    background-position: 
+      calc(100% - 100px) 150px,
+      100px calc(100% - 130px);
+  }
+  50% {
+    background-position: 
+      calc(100% - 150px) 100px,
+      150px calc(100% - 80px);
+  }
+  75% {
+    background-position: 
+      calc(100% - 100px) 50px,
+      100px calc(100% - 30px);
+  }
+  100% {
+    background-position: 
+      calc(100% - 50px) 100px,
+      50px calc(100% - 80px);
+  }
+}
+
+/* Add running logs in the background */
+.tech-theme body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(18, 30, 50, 0.8), rgba(18, 30, 50, 0.8)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Ctext x='10' y='20' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:41] INFO: System initialization started%3C/text%3E%3Ctext x='10' y='35' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:42] DEBUG: Loading configuration from /etc/system.conf%3C/text%3E%3Ctext x='10' y='50' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:42] INFO: Configuration loaded successfully%3C/text%3E%3Ctext x='10' y='65' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:43] DEBUG: Connecting to database...%3C/text%3E%3Ctext x='10' y='80' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:44] INFO: Database connection established%3C/text%3E%3Ctext x='10' y='95' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:45] DEBUG: Starting service: authentication%3C/text%3E%3Ctext x='10' y='110' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:46] DEBUG: Starting service: api%3C/text%3E%3Ctext x='10' y='125' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:47] DEBUG: Starting service: scheduler%3C/text%3E%3Ctext x='10' y='140' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:48] INFO: All services started successfully%3C/text%3E%3Ctext x='10' y='155' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:49] DEBUG: Initializing cache...%3C/text%3E%3Ctext x='10' y='170' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:50] INFO: Cache initialized%3C/text%3E%3Ctext x='10' y='185' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:51] DEBUG: Loading user profiles...%3C/text%3E%3Ctext x='10' y='200' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:52] INFO: 1024 user profiles loaded%3C/text%3E%3Ctext x='10' y='215' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:53] DEBUG: Checking system integrity...%3C/text%3E%3Ctext x='10' y='230' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:54] INFO: System integrity verified%3C/text%3E%3Ctext x='10' y='245' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:55] DEBUG: Starting background tasks...%3C/text%3E%3Ctext x='10' y='260' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:56] INFO: Background tasks started%3C/text%3E%3Ctext x='10' y='275' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:57] DEBUG: Monitoring system resources...%3C/text%3E%3Ctext x='10' y='290' font-family='monospace' font-size='8' fill='%2300c8ff' fill-opacity='0.3'%3E[2025-04-07 11:26:58] INFO: System ready%3C/text%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 20px) 20px;
+  z-index: -1;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Add animated circuit paths */
+.tech-theme .circuit-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.tech-theme .circuit-path {
+  position: absolute;
+  background: linear-gradient(90deg, rgba(74, 144, 226, 0), rgba(74, 144, 226, 0.5), rgba(74, 144, 226, 0));
+  height: 1px;
+  width: 100px;
+  animation: circuit-flow 4s linear infinite;
+}
+
+.tech-theme .circuit-path:nth-child(1) {
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  transform: rotate(30deg);
+  animation-delay: 0s;
+}
+
+.tech-theme .circuit-path:nth-child(2) {
+  top: 30%;
+  right: 10%;
+  width: 150px;
+  transform: rotate(-45deg);
+  animation-delay: 1s;
+}
+
+.tech-theme .circuit-path:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  width: 180px;
+  transform: rotate(60deg);
+  animation-delay: 2s;
+}
+
+.tech-theme .circuit-path:nth-child(4) {
+  bottom: 40%;
+  right: 25%;
+  width: 120px;
+  transform: rotate(-20deg);
+  animation-delay: 3s;
+}
+
+@keyframes circuit-flow {
+  0% {
+    background-position: -100px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+/* Circuit animations for Tech theme */
+body.tech-theme::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(74, 144, 226, 0.1) 0%, rgba(74, 144, 226, 0) 50%),
+    radial-gradient(circle at 80% 70%, rgba(0, 200, 255, 0.1) 0%, rgba(0, 200, 255, 0) 50%);
+}
+
+/* Animated circuit lines */
+.tech-theme .circuit-line {
+  position: fixed;
+  background: linear-gradient(90deg, rgba(74, 144, 226, 0), rgba(74, 144, 226, 0.7), rgba(74, 144, 226, 0));
+  height: 2px;
+  width: 200px;
+  z-index: 10;
+  pointer-events: none;
+  animation: circuit-pulse 3s infinite;
+  box-shadow: 0 0 10px var(--tech-accent),
+              0 0 20px rgba(0, 200, 255, 0.5);
+}
+
+.tech-theme .circuit-line-1 {
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  transform: rotate(30deg);
+  animation-delay: 0s;
+}
+
+.tech-theme .circuit-line-2 {
+  top: 30%;
+  right: 10%;
+  width: 150px;
+  transform: rotate(-45deg);
+  animation-delay: 0.5s;
+}
+
+.tech-theme .circuit-line-3 {
+  bottom: 20%;
+  left: 15%;
+  width: 180px;
+  transform: rotate(15deg);
+  animation-delay: 1s;
+}
+
+.tech-theme .circuit-line-4 {
+  bottom: 40%;
+  right: 20%;
+  width: 220px;
+  transform: rotate(-20deg);
+  animation-delay: 1.5s;
+}
+
+@keyframes circuit-pulse {
+  0% {
+    opacity: 0;
+    background-position: -100px 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-position: 300px 0;
+  }
+}
+
+/* Circuit line animations for layout component */
+.tech-theme .circuit-line {
+  position: fixed;
+  background: linear-gradient(90deg, 
+    rgba(0, 200, 255, 0), 
+    rgba(0, 200, 255, 0.8), 
+    rgba(0, 200, 255, 0));
+  height: 2px;
+  width: 200px;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 0 10px var(--tech-accent),
+              0 0 20px rgba(0, 200, 255, 0.5);
+  animation: circuit-pulse 3s linear infinite;
+  opacity: 0;
+  display: none;
+}
+
+.tech-theme .circuit-line {
+  display: block;
+}
+
+.tech-theme .circuit-line-1 {
+  top: 10%;
+  left: 5%;
+  width: 200px;
+  transform: rotate(30deg);
+  animation-delay: 0s;
+}
+
+.tech-theme .circuit-line-2 {
+  top: 30%;
+  right: 10%;
+  width: 150px;
+  transform: rotate(-45deg);
+  animation-delay: 0.5s;
+}
+
+.tech-theme .circuit-line-3 {
+  bottom: 20%;
+  left: 15%;
+  width: 180px;
+  transform: rotate(15deg);
+  animation-delay: 1s;
+}
+
+.tech-theme .circuit-line-4 {
+  bottom: 40%;
+  right: 20%;
+  width: 220px;
+  transform: rotate(-20deg);
+  animation-delay: 1.5s;
+}
+
+@keyframes circuit-pulse {
+  0% {
+    opacity: 0;
+    background-position: -100px 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-position: 300px 0;
+  }
+}
+
+/* Additional circuit lines for better coverage */
+.tech-theme .circuit-line-5 {
+  top: 50%;
+  left: 25%;
+  width: 200px;
+  transform: rotate(60deg);
+  animation-delay: 2s;
+}
+
+.tech-theme .circuit-line-6 {
+  top: 70%;
+  right: 30%;
+  width: 150px;
+  transform: rotate(-60deg);
+  animation-delay: 2.5s;
+}
+
+.tech-theme .circuit-line-7 {
+  bottom: 10%;
+  left: 10%;
+  width: 180px;
+  transform: rotate(30deg);
+  animation-delay: 3s;
+}
+
+.tech-theme .circuit-line-8 {
+  bottom: 30%;
+  right: 20%;
+  width: 220px;
+  transform: rotate(-30deg);
+  animation-delay: 3.5s;
+}
+
+/* Add circuit lines to main content area that follow scroll */
+.tech-theme .main-content::before,
+.tech-theme .main-content::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(90deg, 
+    rgba(0, 200, 255, 0), 
+    rgba(0, 200, 255, 0.8), 
+    rgba(0, 200, 255, 0));
+  height: 2px;
+  width: 180px;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 0 10px var(--tech-accent),
+              0 0 20px rgba(0, 200, 255, 0.5);
+  animation: circuit-pulse 3s linear infinite;
+}
+
+.tech-theme .main-content::before {
+  top: 25%;
+  left: 10%;
+  transform: rotate(30deg);
+  animation-delay: 3s;
+}
+
+.tech-theme .main-content::after {
+  bottom: 35%;
+  right: 15%;
+  transform: rotate(-30deg);
+  animation-delay: 3.5s;
+}
+
+/* Add circuit lines to each section */
+.tech-theme .section::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(90deg, 
+    rgba(0, 200, 255, 0), 
+    rgba(0, 200, 255, 0.8), 
+    rgba(0, 200, 255, 0));
+  height: 2px;
+  width: 120px;
+  z-index: 10;
+  left: 5%;
+  top: 20px;
+  pointer-events: none;
+  box-shadow: 0 0 10px var(--tech-accent),
+              0 0 20px rgba(0, 200, 255, 0.5);
+  animation: circuit-pulse 3s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes circuit-pulse {
+  0% {
+    opacity: 0;
+    background-position: -100px 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-position: 300px 0;
+  }
+}
+
+/* Floating code snippets */
+.tech-theme .floating-code {
+  position: fixed;
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  color: var(--tech-accent);
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 2px solid var(--tech-accent);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  display: none;
+  animation: float-code 60s linear infinite;
+  box-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+.tech-theme .floating-code {
+  display: block;
+  opacity: 0.7;
+}
+
+.tech-theme .floating-code-1 {
+  top: 15%;
+  right: 10%;
+  animation-delay: 0s;
+}
+
+.tech-theme .floating-code-2 {
+  bottom: 25%;
+  left: 5%;
+  animation-delay: 30s;
+}
+
+@keyframes float-code {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(20px, 10px); }
+  50% { transform: translate(0, 20px); }
+  75% { transform: translate(-20px, 10px); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Header styling */
+.tech-theme .header {
+  background-color: var(--tech-header-bg) !important;
+  border-bottom: 2px solid var(--tech-accent-primary);
+  box-shadow: var(--tech-box-shadow);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.tech-theme .header * {
+  background-color: transparent !important;
+}
+
+.tech-theme .logo a {
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  color: var(--tech-accent-primary);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Navigation styling */
+.tech-theme .nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: var(--tech-accent-primary);
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-theme .nav-link:hover {
+  color: var(--tech-accent-tertiary);
+}
+
+.tech-theme .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--tech-accent-tertiary);
+  transition: width 0.3s ease;
+}
+
+.tech-theme .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Card styling */
+.tech-theme .card {
+  background-color: var(--tech-card-bg);
+  border-radius: var(--tech-border-radius);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  box-shadow: var(--tech-box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-theme .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary));
+}
+
+.tech-theme .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(74, 144, 226, 0.25);
+}
+
+.tech-theme .card-header {
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  color: var(--tech-accent-primary);
+  border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+  background-color: rgba(240, 245, 255, 0.7);
+  padding: 1rem;
+}
+
+/* Typography */
+.tech-theme h1, 
+.tech-theme h2 {
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  color: var(--tech-accent-primary);
+  margin-bottom: 1rem;
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.tech-theme h1::after,
+.tech-theme h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary));
+}
+
+.tech-theme h3, 
+.tech-theme h4, 
+.tech-theme h5 {
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  color: var(--tech-accent-primary);
+  letter-spacing: 0.8px;
+  font-size: 1.8rem;
+}
+
+.tech-theme p {
+  font-family: 'Roboto', 'Inter', sans-serif;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  letter-spacing: 0.3px;
+}
+
+.tech-theme .subtitle,
+.tech-theme .card-body p,
+.tech-theme footer p {
+  font-family: 'Roboto', 'Inter', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+/* Global typography for Tech theme */
+.tech-theme {
+  font-family: 'Roboto', 'Inter', sans-serif;
+}
+
+.tech-theme h1,
+.tech-theme h2,
+.tech-theme h3,
+.tech-theme h4,
+.tech-theme h5,
+.tech-theme h6,
+.tech-theme .section-title,
+.tech-theme .category-title,
+.tech-theme .company-name,
+.tech-theme .project-title,
+.tech-theme .education-degree,
+.tech-theme .logo a {
+  font-family: 'Orbitron', 'Roboto', sans-serif !important;
+  color: var(--tech-accent-primary);
+}
+
+.tech-theme p,
+.tech-theme span,
+.tech-theme li,
+.tech-theme a,
+.tech-theme label,
+.tech-theme input,
+.tech-theme textarea,
+.tech-theme button {
+  font-family: 'Roboto', 'Inter', sans-serif !important;
+  color: var(--tech-text-primary);
+}
+
+/* Navigation menu items */
+.tech-theme .nav-list li a {
+  font-family: 'Orbitron', 'Roboto', sans-serif !important;
+  color: var(--tech-accent-primary);
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tech-theme .nav-list li a:hover {
+  color: var(--tech-accent-tertiary);
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.tech-theme .btn-primary {
+  background-color: var(--tech-accent-primary);
+  border-color: var(--tech-accent-primary);
+  color: #ffffff;
+  font-family: 'Roboto', 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--tech-border-radius);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.tech-theme .btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+  z-index: -1;
+}
+
+.tech-theme .btn-primary:hover {
+  background-color: var(--tech-accent-secondary);
+  border-color: var(--tech-accent-secondary);
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+.tech-theme .btn-primary:hover::before {
+  left: 100%;
+}
+
+.tech-theme .btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--tech-accent-primary);
+  color: var(--tech-accent-primary);
+  font-family: 'Roboto', 'Inter', sans-serif;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--tech-border-radius);
+  transition: all 0.3s ease;
+}
+
+.tech-theme .btn-secondary:hover {
+  background-color: var(--tech-accent-primary);
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+}
+
+/* Footer styling */
+.tech-theme footer {
+  background-color: var(--tech-footer-bg);
+  border-top: 2px solid var(--tech-accent-primary);
+  padding: 2rem 0;
+}
+
+.tech-theme .footer {
+  background-color: var(--tech-card-bg) !important;
+  border-top: 1px solid rgba(74, 144, 226, 0.2);
+  box-shadow: 0 -2px 10px rgba(74, 144, 226, 0.1);
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+}
+
+.tech-theme .footer-content {
+  background-color: transparent !important;
+}
+
+.tech-theme .copyright {
+  color: var(--tech-text-primary);
+  font-family: 'Roboto', 'Inter', sans-serif;
+  background-color: transparent !important;
+}
+
+.tech-theme .footer-contact {
+  background-color: transparent !important;
+}
+
+.tech-theme .footer-contact-item {
+  color: var(--tech-text-primary);
+  font-family: 'Roboto', 'Inter', sans-serif;
+  background-color: transparent !important;
+}
+
+.tech-theme .social-links {
+  background-color: transparent !important;
+}
+
+.tech-theme .social-links a {
+  color: var(--tech-accent-primary);
+  background-color: transparent !important;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.tech-theme .social-links a:hover {
+  color: var(--tech-accent-tertiary);
+  transform: translateY(-3px);
+}
+
+.tech-theme .social-links i {
+  font-size: 1.5rem;
+  background-color: transparent !important;
+}
+
+/* Force background color on all footer children */
+.tech-theme .footer * {
+  background-color: transparent !important;
+}
+
+/* Main content area */
+.tech-theme .main-content {
+  background-color: var(--tech-bg-primary);
+}
+
+/* Cards and containers */
+.tech-theme .card,
+.tech-theme .container,
+.tech-theme .card-body {
+  background-color: var(--tech-card-bg);
+}
+
+/* Override any white backgrounds */
+.tech-theme .layout-container,
+.tech-theme .section,
+.tech-theme .profile-section,
+.tech-theme .experience-section,
+.tech-theme .skills-section,
+.tech-theme .projects-section,
+.tech-theme .contact-section,
+.tech-theme .main-content,
+.tech-theme .container {
+  background-color: var(--tech-bg-primary) !important;
+  color: var(--tech-text-primary) !important;
+}
+
+/* Override any white form elements */
+.tech-theme input,
+.tech-theme textarea,
+.tech-theme select {
+  background-color: var(--tech-bg-secondary) !important;
+  color: var(--tech-text-primary) !important;
+  border: 1px solid var(--tech-accent-primary) !important;
+  border-radius: var(--tech-border-radius);
+}
+
+/* Override any white modal backgrounds */
+.tech-theme .modal,
+.tech-theme .modal-content,
+.tech-theme .modal-body,
+.tech-theme .modal-header,
+.tech-theme .modal-footer {
+  background-color: var(--tech-bg-primary) !important;
+  color: var(--tech-text-primary) !important;
+}
+
+/* Force all cards to have the correct background */
+.tech-theme .card,
+.tech-theme .company-card,
+.tech-theme .project-card,
+.tech-theme .skill-card,
+.tech-theme .education-card,
+.tech-theme .highlight-card,
+.tech-theme .certification-card,
+.tech-theme .timeline-content,
+.tech-theme .timeline-item {
+  background-color: var(--tech-card-bg) !important;
+  color: var(--tech-text-primary) !important;
+  border: 1px solid rgba(74, 144, 226, 0.3) !important;
+}
+
+/* Ensure all text has proper contrast */
+.tech-theme div,
+.tech-theme p,
+.tech-theme span,
+.tech-theme li,
+.tech-theme label {
+  color: var(--tech-text-primary) !important;
+}
+
+/* Ensure all headings have proper contrast */
+.tech-theme h1,
+.tech-theme h2,
+.tech-theme h3,
+.tech-theme h4,
+.tech-theme h5,
+.tech-theme h6,
+.tech-theme .section-title,
+.tech-theme .job-title,
+.tech-theme .company-name,
+.tech-theme .project-title,
+.tech-theme .skill-category,
+.tech-theme .education-degree {
+  color: var(--tech-accent-primary) !important;
+}
+
+/* Ensure all links have proper contrast */
+.tech-theme a {
+  color: var(--tech-accent-tertiary) !important;
+}
+
+.tech-theme a:hover {
+  color: var(--tech-accent-secondary) !important;
+  text-decoration: underline;
+}
+
+/* Timeline date styling with better contrast */
+.tech-theme .timeline-date {
+  background-color: var(--tech-accent-primary) !important;
+  color: #ffffff !important;
+  padding: 0.5rem 1rem;
+  border-radius: var(--tech-border-radius);
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+}
+
+.tech-theme .timeline-date span {
+  color: #ffffff !important;
+}
+
+/* Project cards */
+.tech-theme .project-card {
+  background-color: var(--tech-card-bg) !important;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: var(--tech-border-radius);
+  box-shadow: var(--tech-box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-theme .project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary));
+}
+
+.tech-theme .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.25);
+}
+
+/* Fix for text color in specific DOM elements */
+.tech-theme a {
+  color: var(--tech-accent-primary) !important;
+  transition: color 0.3s ease;
+}
+
+.tech-theme a:hover {
+  color: var(--tech-accent-tertiary) !important;
+}
+
+.tech-theme h1,
+.tech-theme h2 {
+  color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme .cta-buttons .btn-primary {
+  background-color: var(--tech-accent-primary) !important;
+  color: var(--tech-bg-primary) !important;
+  border-color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme .cta-buttons .btn-secondary {
+  background-color: transparent !important;
+  color: var(--tech-accent-primary) !important;
+  border-color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme .cta-buttons .btn-primary:hover {
+  background-color: var(--tech-accent-secondary) !important;
+  border-color: var(--tech-accent-secondary) !important;
+}
+
+.tech-theme .cta-buttons .btn-secondary:hover {
+  background-color: var(--tech-accent-primary) !important;
+  color: var(--tech-bg-primary) !important;
+  border-color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme .view-all-link {
+  color: var(--tech-accent-primary) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tech-theme .view-all-link:hover {
+  color: var(--tech-accent-tertiary) !important;
+  text-decoration: underline;
+}
+
+/* Fix for skill card progress bars */
+.tech-theme .skill-progress-container {
+  background-color: rgba(30, 42, 62, 0.5) !important;
+  border: 1px solid rgba(74, 144, 226, 0.3) !important;
+  height: 10px !important;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  margin-bottom: 15px !important;
+}
+
+.tech-theme .skill-progress-bar {
+  background: linear-gradient(90deg, var(--tech-accent-primary), var(--tech-accent-tertiary)) !important;
+  height: 100% !important;
+  border-radius: 5px !important;
+  box-shadow: 0 0 5px rgba(0, 200, 255, 0.5) !important;
+}
+
+.tech-theme .skill-name {
+  color: var(--tech-text-primary) !important;
+  font-weight: 500 !important;
+  margin-bottom: 5px !important;
+}
+
+.tech-theme .skill-level {
+  color: var(--tech-accent-tertiary) !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 5px !important;
+}
+
+/* Fix for horizontal dividers/lines */
+.tech-theme hr,
+.tech-theme .divider {
+  border-color: rgba(74, 144, 226, 0.3) !important;
+  background-color: rgba(74, 144, 226, 0.3) !important;
+  height: 1px !important;
+  opacity: 0.7 !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* Fix for any borders that might be invisible */
+.tech-theme .card,
+.tech-theme .company-card,
+.tech-theme .project-card,
+.tech-theme .skill-card,
+.tech-theme .education-card,
+.tech-theme .highlight-card,
+.tech-theme .certification-card,
+.tech-theme .timeline-content,
+.tech-theme .timeline-item {
+  border: 1px solid rgba(74, 144, 226, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Fix for list item bullets */
+.tech-theme ul li::before {
+  color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme ul.skill-list li {
+  border-bottom: 1px solid rgba(74, 144, 226, 0.3) !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.tech-theme ul.skill-list li:last-child {
+  border-bottom: none !important;
+}
+
+/* Fix for skill level indicator divs */
+.tech-theme .skill-level {
+  background: linear-gradient(90deg, var(--tech-accent-primary), var(--tech-accent-tertiary)) !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+  position: relative !important;
+  box-shadow: 0 0 8px rgba(0, 200, 255, 0.5) !important;
+  margin-bottom: 20px !important;
+}
+
+.tech-theme .skill-progress {
+  background-color: rgba(30, 42, 62, 0.5) !important;
+  border: 1px solid rgba(74, 144, 226, 0.3) !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Add a glow effect to make them more visible */
+.tech-theme .skill-level::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(0, 200, 255, 0.3), transparent);
+  animation: skill-glow 2s infinite;
+  border-radius: 4px;
+}
+
+@keyframes skill-glow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Make sure the skill name is visible */
+.tech-theme .skill-name {
+  color: var(--tech-text-primary) !important;
+  font-weight: 500 !important;
+  margin-bottom: 5px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.tech-theme .skill-name span:last-child {
+  color: var(--tech-accent-tertiary) !important;
+}
+
+/* Enhanced styling for skills and education cards */
+.tech-theme .skill-card,
+.tech-theme .education-card {
+  background-color: var(--tech-card-bg) !important;
+  border: 1px solid rgba(74, 144, 226, 0.2) !important;
+  border-radius: var(--tech-border-radius) !important;
+  box-shadow: var(--tech-box-shadow) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  margin-bottom: 1.5rem !important;
+  padding: 1.5rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.tech-theme .skill-card::before,
+.tech-theme .education-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary)) !important;
+}
+
+.tech-theme .skill-card:hover,
+.tech-theme .education-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.25) !important;
+}
+
+/* Style education card headers */
+.tech-theme .education-degree {
+  color: var(--tech-accent-primary) !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 0.5rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+.tech-theme .education-institution {
+  color: var(--tech-text-primary) !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.tech-theme .education-date {
+  color: var(--tech-accent-tertiary) !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 1rem !important;
+  display: inline-block !important;
+  padding: 0.2rem 0.6rem !important;
+  background-color: rgba(0, 200, 255, 0.1) !important;
+  border-radius: 4px !important;
+}
+
+.tech-theme .education-description {
+  color: var(--tech-text-secondary) !important;
+  line-height: 1.6 !important;
+}
+
+/* Style skill category headers */
+.tech-theme .skill-category {
+  color: var(--tech-accent-primary) !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-size: 1.2rem !important;
+  margin-bottom: 1rem !important;
+  letter-spacing: 0.5px !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid rgba(74, 144, 226, 0.3) !important;
+}
+
+/* Add tech-inspired icon to skill cards */
+.tech-theme .skill-card {
+  padding-left: 2.5rem !important;
+}
+
+.tech-theme .skill-card::before {
+  content: '⚡';
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--tech-accent-primary);
+  opacity: 0.8;
+}
+
+/* Add tech-inspired icon to education cards */
+.tech-theme .education-card {
+  padding-left: 2.5rem !important;
+}
+
+.tech-theme .education-card::before {
+  content: '🎓';
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--tech-accent-primary);
+  opacity: 0.8;
+}
+
+/* Company card styling for experience section */
+.tech-theme .company-card {
+  background-color: var(--tech-card-bg) !important;
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  border-radius: var(--tech-border-radius);
+  box-shadow: var(--tech-box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-theme .company-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary));
+}
+
+.tech-theme .company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.25);
+}
+
+.tech-theme .company-card .company-name {
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+  color: var(--tech-accent-primary);
+  margin-bottom: 1rem;
+  background-color: transparent !important;
+}
+
+.tech-theme .company-card .job-title {
+  color: var(--tech-text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  background-color: transparent !important;
+}
+
+.tech-theme .company-card .job-location {
+  color: var(--tech-text-primary);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  background-color: transparent !important;
+}
+
+.tech-theme .company-card .job-details {
+  padding: 0.5rem 0;
+  background-color: transparent !important;
+}
+
+.tech-theme .company-card .job-details p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.tech-theme .company-card .job-details h4 {
+  margin: 1.25rem 0 0.75rem;
+  color: var(--tech-accent-primary);
+}
+
+.tech-theme .company-card .job-details ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-theme .company-card .job-details li {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.tech-theme .company-card .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.tech-theme .company-card .tech-tag {
+  background-color: rgba(74, 144, 226, 0.1) !important;
+  color: var(--tech-text-primary);
+  border: 1px solid rgba(74, 144, 226, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.tech-theme .company-card .tech-tag:hover {
+  background-color: rgba(74, 144, 226, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+/* Force background color on all company card children */
+.tech-theme .company-card * {
+  background-color: transparent !important;
+}
+
+/* Timeline content styling */
+.tech-theme .timeline-content {
+  padding: 0.5rem;
+  background-color: transparent !important;
+}
+
+/* Timeline item styling */
+.tech-theme .timeline-item {
+  margin-bottom: 2rem;
+  background-color: transparent !important;
+}
+
+/* Timeline date styling */
+.tech-theme .timeline-date {
+  background-color: var(--tech-accent-primary) !important;
+  color: var(--tech-bg-primary) !important;
+  padding: 0.5rem 1rem;
+  border-radius: var(--tech-border-radius);
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', 'Roboto', sans-serif;
+}
+
+.tech-theme .timeline-date span {
+  color: var(--tech-bg-primary) !important;
+}
+
+/* Fix for any remaining white backgrounds in containers */
+.tech-theme .container,
+.tech-theme .container-fluid {
+  background-color: var(--tech-bg-primary) !important;
+}
+
+/* Fix for any remaining white backgrounds in sections */
+.tech-theme section {
+  background-color: var(--tech-bg-primary) !important;
+}
+
+/* Fix for any remaining white backgrounds in rows and columns */
+.tech-theme .row,
+.tech-theme .col,
+.tech-theme [class^="col-"] {
+  background-color: transparent !important;
+}
+
+/* Fix for tech tags */
+.tech-theme .tech-tag {
+  background-color: rgba(74, 144, 226, 0.2) !important;
+  color: var(--tech-text-primary) !important;
+  border: 1px solid rgba(74, 144, 226, 0.4) !important;
+}
+
+/* Fix for job details */
+.tech-theme .job-details,
+.tech-theme .job-details p,
+.tech-theme .job-details li {
+  color: var(--tech-text-primary) !important;
+}
+
+/* Fix for job location */
+.tech-theme .job-location {
+  color: var(--tech-text-secondary) !important;
+}
+
+/* Fix for any remaining white backgrounds in lists */
+.tech-theme ul,
+.tech-theme ol,
+.tech-theme li {
+  background-color: transparent !important;
+}
+
+/* Ensure all buttons have proper contrast */
+.tech-theme .btn-primary {
+  background-color: var(--tech-accent-primary) !important;
+  color: #ffffff !important;
+  border-color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme .btn-secondary {
+  background-color: transparent !important;
+  color: var(--tech-accent-primary) !important;
+  border-color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme .btn-primary:hover {
+  background-color: var(--tech-accent-secondary) !important;
+  color: #ffffff !important;
+}
+
+.tech-theme .btn-secondary:hover {
+  background-color: var(--tech-accent-primary) !important;
+  color: #ffffff !important;
+}
+
+/* Fix for education items that are still white */
+.tech-theme .education-item {
+  background-color: var(--tech-card-bg) !important;
+  border: 1px solid rgba(74, 144, 226, 0.2) !important;
+  border-radius: var(--tech-border-radius) !important;
+  box-shadow: var(--tech-box-shadow) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  margin-bottom: 1.5rem !important;
+  padding: 1.5rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.tech-theme .education-item::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary)) !important;
+}
+
+.tech-theme .education-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.25) !important;
+}
+
+/* Fix for education header, institution, and description */
+.tech-theme .education-header,
+.tech-theme .education-institution,
+.tech-theme .education-description {
+  background-color: transparent !important;
+}
+
+.tech-theme .education-degree {
+  color: var(--tech-accent-primary) !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.tech-theme .education-period {
+  color: var(--tech-accent-tertiary) !important;
+}
+
+.tech-theme .institution-name {
+  color: var(--tech-text-primary) !important;
+  font-weight: 500 !important;
+}
+
+.tech-theme .institution-location {
+  color: var(--tech-text-secondary) !important;
+  font-style: italic !important;
+}
+
+/* Fix for any remaining white backgrounds in education section */
+.tech-theme .education-section * {
+  background-color: transparent !important;
+}
+
+.tech-theme .education-section .container,
+.tech-theme .education-section .row,
+.tech-theme .education-section [class^="col-"] {
+  background-color: transparent !important;
+}
+
+/* Fix for skill items that might still be white */
+.tech-theme .skill-item {
+  background-color: var(--tech-card-bg) !important;
+  border: 1px solid rgba(74, 144, 226, 0.2) !important;
+  border-radius: var(--tech-border-radius) !important;
+  box-shadow: var(--tech-box-shadow) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  margin-bottom: 1.5rem !important;
+  padding: 1.5rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.tech-theme .skill-item::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary)) !important;
+}
+
+.tech-theme .skill-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.25) !important;
+}
+
+/* Force all cards to have the correct background */
+.tech-theme .card,
+.tech-theme div[class*="card"],
+.tech-theme div[class*="-item"],
+.tech-theme .company-card,
+.tech-theme .project-card,
+.tech-theme .skill-card,
+.tech-theme .education-card,
+.tech-theme .highlight-card,
+.tech-theme .certification-card,
+.tech-theme .timeline-content,
+.tech-theme .timeline-item {
+  background-color: var(--tech-card-bg) !important;
+  color: var(--tech-text-primary) !important;
+  border: 1px solid rgba(74, 144, 226, 0.3) !important;
+}
+
+/* Fix for skill category and skill-list that are still white */
+.tech-theme .skill-category {
+  background-color: transparent !important;
+  margin-bottom: 2rem !important;
+}
+
+.tech-theme .skills-list {
+  background-color: transparent !important;
+}
+
+.tech-theme .category-title {
+  color: var(--tech-accent-primary) !important;
+  font-family: 'Orbitron', sans-serif !important;
+  margin-bottom: 1.5rem !important;
+  border-bottom: 1px solid rgba(74, 144, 226, 0.3) !important;
+  padding-bottom: 0.5rem !important;
+}
+
+/* Fix for skill icons */
+.tech-theme .skill-icon {
+  background-color: transparent !important;
+  color: var(--tech-accent-primary) !important;
+}
+
+.tech-theme .skill-info {
+  background-color: transparent !important;
+}
+
+.tech-theme .skill-bar {
+  background-color: rgba(30, 42, 62, 0.5) !important;
+  border: 1px solid rgba(74, 144, 226, 0.3) !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+}
+
+/* Force all section containers to be transparent */
+.tech-theme .section-container,
+.tech-theme .section-content,
+.tech-theme .section-header,
+.tech-theme .section-body,
+.tech-theme .container,
+.tech-theme .row,
+.tech-theme [class^="col-"] {
+  background-color: transparent !important;
+}
+
+/* Fix for any remaining white backgrounds */
+.tech-theme .skills-section * {
+  background-color: transparent !important;
+}
+
+/* Ensure all skill items have the correct background */
+.tech-theme .skill-item {
+  background-color: var(--tech-card-bg) !important;
+  border: 1px solid rgba(74, 144, 226, 0.2) !important;
+  border-radius: var(--tech-border-radius) !important;
+  box-shadow: var(--tech-box-shadow) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  margin-bottom: 1rem !important;
+  padding: 1rem !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.tech-theme .skill-item::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(to right, var(--tech-accent-primary), var(--tech-accent-tertiary)) !important;
+}
+
+.tech-theme .skill-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(74, 144, 226, 0.25) !important;
+}
+
+/* Enhanced Tech Theme Glow Effects */
+body.tech-theme {
+  --tech-glow-color: rgba(0, 200, 255, 0.5);
+  --tech-glow-spread: 10px;
+  --tech-pulse-duration: 4s;
+}
+
+/* Add glowing borders to cards in tech theme */
+.tech-theme .card {
+  position: relative;
+  border: 1px solid var(--tech-accent);
+  box-shadow: 0 0 10px var(--tech-accent-transparent), 
+              0 0 20px rgba(0, 200, 255, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.tech-theme .card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--tech-accent), var(--tech-secondary), var(--tech-accent));
+  background-size: 200% 100%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.tech-theme .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px var(--tech-accent-transparent),
+              0 10px 30px rgba(0, 200, 255, 0.15);
+}
+
+/* Pulsing glow effect for buttons and interactive elements */
+.tech-theme button,
+.tech-theme .btn,
+.tech-theme a.active {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.tech-theme button::after,
+.tech-theme .btn::after,
+.tech-theme a.active::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: inherit;
+  background: transparent;
+  border: 2px solid var(--tech-accent);
+  opacity: 0;
+  z-index: -1;
+  animation: pulse-border var(--tech-pulse-duration) ease-out infinite;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Add more visible circuit animations */
+.tech-theme .circuit-line {
+  position: fixed;
+  background: linear-gradient(90deg, 
+    rgba(0, 200, 255, 0), 
+    rgba(0, 200, 255, 0.8), 
+    rgba(0, 200, 255, 0));
+  height: 2px;
+  width: 200px;
+  z-index: 10;
+  pointer-events: none;
+  box-shadow: 0 0 10px var(--tech-accent),
+              0 0 20px rgba(0, 200, 255, 0.5);
+  animation: circuit-pulse 3s infinite;
+}
+
+/* Add font imports */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/assets/fonts/Orbitron-Regular.ttf') format('truetype'),
+       url('/Overlord/assets/fonts/Orbitron-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/assets/fonts/Orbitron-Bold.ttf') format('truetype'),
+       url('/Overlord/assets/fonts/Orbitron-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
