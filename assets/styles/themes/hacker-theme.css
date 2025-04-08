@@ -567,3 +567,38 @@
 .hacker-theme::-webkit-scrollbar-thumb:hover {
   background: var(--hacker-text);
 }
+
+/* Skills section styling */
+.hacker-theme .skill-bar {
+  background-color: rgba(26, 26, 26, 0.6);
+  border: 1px solid var(--hacker-border);
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hacker-theme .skill-level {
+  background-color: var(--hacker-primary);
+  box-shadow: 0 0 8px var(--hacker-text);
+  height: 100%;
+  position: relative;
+}
+
+.hacker-theme .skill-level::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(0, 255, 65, 0.2) 50%, 
+    transparent 100%);
+  animation: skill-pulse 2s infinite;
+}
+
+@keyframes skill-pulse {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
