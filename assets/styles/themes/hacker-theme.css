@@ -39,7 +39,7 @@
 /* Terminal-style interface */
 .hacker-theme .card,
 .hacker-theme .section {
-  background-color: var(--card-bg);
+  background-color: rgba(26, 26, 26, 0.4) !important;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   padding: 1rem;
@@ -287,6 +287,28 @@
 .hacker-theme main {
   position: relative;
   z-index: 1;
+  background-color: rgba(13, 2, 8, 0.3) !important;
+}
+
+/* Make all content containers transparent */
+.hacker-theme div,
+.hacker-theme section,
+.hacker-theme article,
+.hacker-theme aside,
+.hacker-theme nav {
+  background-color: transparent !important;
+}
+
+/* Ensure text remains readable with higher contrast */
+.hacker-theme h1, 
+.hacker-theme h2, 
+.hacker-theme h3, 
+.hacker-theme h4, 
+.hacker-theme h5, 
+.hacker-theme h6,
+.hacker-theme p,
+.hacker-theme span {
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.8);
 }
 
 /* Card styling */
