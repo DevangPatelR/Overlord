@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <meta name="robots" content="noindex">
+  <script>
+    (function() {
+      var l = window.location;
+      // Redirect to the SPA entry with the original path preserved as a parameter
+      var full = l.pathname + (l.search || '') + (l.hash || '');
+      var target = l.protocol + '//' + l.host + '/?p=' + encodeURIComponent(full);
+      l.replace(target);
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/?p=/">
+  </noscript>
+</head>
+<body>
+  Redirecting…
+</body>
+</html>

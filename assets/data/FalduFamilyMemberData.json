@@ -1,0 +1,236 @@
+{
+    "members": [
+        {
+            "id": "38f9e5a1-0c2e-4b4e-9e8d-5f8a2c8e3b2a",
+            "en-firstName": "MeghjiBhai",
+            "en-middleName": "DevsiBhai",
+            "en-lastName": "Faldu",
+            "hi-firstName": "मेघभाई",
+            "hi-middleName": "देवसीभाई",
+            "hi-lastName": "फल्डु",
+            "gu-firstName": "મેઘભાઈ",
+            "gu-middleName": "દેવસીભાઈ",
+            "gu-lastName": "ફલ્ડુ",
+            "gender": "male",
+            "dateOfBirth": "1911-02-20",
+            "dateOfDeath": null,
+            "maritalStatus": "married",
+            "photo": "https://example.com/photos/devang.jpg",
+            "spouse": [
+                {
+                    "en-firstName": "KesarBaa",
+                    "en-middleName": "MeghjiBhai",
+                    "en-lastName": "Faldu",
+                    "hi-firstName": "केसरबा",
+                    "hi-middleName": "मेघभाई",
+                    "hi-lastName": "फल्डु",
+                    "gu-firstName": "કેસરબા",
+                    "gu-middleName": "મેઘભાઈ",
+                    "gu-lastName": "ફલ્ડુ",
+                    "gender": "female",
+                    "photo": "https://example.com/photos/sonmaya-patel.jpg",
+                    "en-maidenName": "Chattri",
+                    "hi-maidenName": "चत्री",
+                    "gu-maidenName": "ચત્રી",
+                    "dateOfBirth": "1920-03-05",
+                    "dateOfDeath": null,
+                    "startOfMarriage": "2041-06-15",
+                    "endOfMarriage": null
+                },
+                {
+                    "en-firstName": "Sonmaya",
+                    "en-middleName": "MeghjiBhai",
+                    "en-lastName": "Faldu",
+                    "hi-firstName": "सोनमाया",
+                    "hi-middleName": "मेघभाई",
+                    "hi-lastName": "फल्डु",
+                    "gu-firstName": "સોનમયા",
+                    "gu-middleName": "મેઘભાઈ",
+                    "gu-lastName": "ફલ્ડુ",
+                    "gender": "female",
+                    "photo": "https://example.com/photos/sonmaya-patel.jpg",
+                    "en-maidenName": "Chattri",
+                    "hi-maidenName": "चत्री",
+                    "gu-maidenName": "ચત્રી",
+                    "dateOfBirth": "1920-03-05",
+                    "dateOfDeath": null,
+                    "startOfMarriage": "2041-06-15",
+                    "endOfMarriage": null
+                }
+            ],
+            "socialNetworks": null
+        },
+        {
+            "id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d",
+            "en-firstName": "Devang",
+            "en-middleName": "RameshBhai",
+            "en-lastName": "Faldu",
+            "hi-firstName": "देवांग",
+            "hi-middleName": "रमेशभाई",
+            "hi-lastName": "फल्डु",
+            "gu-firstName": "દેવાંગ",
+            "gu-middleName": "રમેશભાઈ",
+            "gu-lastName": "ફલ્ડુ",
+            "gender": "male",
+            "dateOfBirth": "1988-02-20",
+            "dateOfDeath": null,
+            "maritalStatus": "married",
+            "photo": "https://media.licdn.com/dms/image/v2/C4D03AQEGg5ryLu1rtQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1623095726227?e=1753315200&v=beta&t=j-Ox3QAXO0tX-1Uq3MrMs2H-YYW5rJNrVfuYd1E5-HU",
+            "spouse": [
+                {
+                    "en-firstName": "Amee",
+                    "en-middleName": "Devang",
+                    "en-lastName": "Faldu",
+                    "hi-firstName": "अमी",
+                    "hi-middleName": "देवांग",
+                    "hi-lastName": "फल्डु",
+                    "gu-firstName": "અમી",
+                    "gu-middleName": "દેવાંગ",
+                    "gu-lastName": "ફલ્ડુ",
+                    "gender": "female",
+                    "photo": "https://media.licdn.com/dms/image/v2/C5603AQFsl84Z1w81IQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1544308123983?e=1753315200&v=beta&t=aE9_DTiE5QHHimNzS6xYm-SQaiMhv9ofKovS_usxbcA",
+                    "en-maidenName": "Kapadia",
+                    "hi-maidenName": "कपाडिया",
+                    "gu-maidenName": "કપાડિયા",
+                    "dateOfBirth": "1990-01-31",
+                    "dateOfDeath": null,
+                    "startOfMarriage": "2015-10-23",
+                    "endOfMarriage": null
+                }
+            ],
+            "socialNetworks": [
+                {
+                    "facebook": {
+                        "title": "Devang Personal",
+                        "url": "https://facebook.com/devang.patel.88"
+                    },
+                    "instagram": {
+                        "title": "Devang Personal",
+                        "url": "https://instagram.com/devang_photography"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7d6c4b3a-2e1f-4a5b-8c9d-0e1f2a3b4c5d",
+            "en-firstName": "Ramesh",
+            "en-middleName": "MeghjiBhai",
+            "en-lastName": "Faldu",
+            "hi-firstName": "रमेश",
+            "hi-middleName": "मेघीभाई",
+            "hi-lastName": "फल्डु",
+            "gu-firstName": "રમેશ",
+            "gu-middleName": "મેઘીભાઈ",
+            "gu-lastName": "ફલ્ડુ",
+            "gender": "male",
+            "dateOfBirth": "1953-12-25",
+            "dateOfDeath": null,
+            "maritalStatus": "married",
+            "photo": "https://lh3.googleusercontent.com/a/ACg8ocKp5jKQ2Vq44PYGNdc9YrcFda-4jwHz8I395gjcen0J3B5GRv4Hqg=s432-c-no",
+            "spouse": [
+                {
+                    "en-firstName": "Rajeshri",
+                    "en-middleName": "Ramesh",
+                    "en-lastName": "Faldu",
+                    "hi-firstName": "राजेश्री",
+                    "hi-middleName": "रमेश",
+                    "hi-lastName": "फल्डु",
+                    "gu-firstName": "રાજેશ્રી",
+                    "gu-middleName": "રમેશ",
+                    "gu-lastName": "ફલ્ડુ",
+                    "gender": "female",
+                    "photo": "https://lh3.googleusercontent.com/a/ACg8ocJRmZKwF5j2B6RBdgL05JgAV_bE0Ymyylq0170NtA3EKpMm0eo=s432-c-no",
+                    "en-maidenName": "Tilva",
+                    "hi-maidenName": "टिलवा",
+                    "gu-maidenName": "ટિલવા",
+                    "dateOfBirth": "1960-06-19",
+                    "dateOfDeath": null,
+                    "startOfMarriage": "1981-04-03",
+                    "endOfMarriage": null
+                }
+            ],
+            "socialNetworks": [
+                {
+                    "facebook": {
+                        "title": "Devang Personal",
+                        "url": "https://facebook.com/devang.patel.88"
+                    },
+                    "instagram": {
+                        "title": "Devang Personal",
+                        "url": "https://instagram.com/devang_photography"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "f1e2d3c4-b5a6-4a5b-8c9d-0e1f2a3b4c5d",
+            "en-firstName": "Himaksh",
+            "en-middleName": "DevangBhai",
+            "en-lastName": "Faldu",
+            "hi-firstName": "हिमांशु",
+            "hi-middleName": "देवांगभाई",
+            "hi-lastName": "फल्डु",
+            "gu-firstName": "હિમાંશુ",
+            "gu-middleName": "દેવાંગભાઈ",
+            "gu-lastName": "ફલ્ડુ",
+            "gender": "male",
+            "dateOfBirth": "2023-11-04",
+            "dateOfDeath": null,
+            "maritalStatus": "single",
+            "photo": "assets/images/FalduFamilyPhotos/HimakshPatel.JPG",
+            "en-maidenName": "Faldu",
+            "hi-maidenName": "फल्डु",
+            "gu-maidenName": "ફલ્ડુ",
+            "spouse": null,
+            "socialNetworks": null
+        },
+        {
+            "id": "a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5c",
+            "en-firstName": "Vaishali",
+            "en-middleName": "KetanKumar",
+            "en-lastName": "Javia",
+            "hi-firstName": "वैशाली",
+            "hi-middleName": "केतनकुमार",
+            "hi-lastName": "जवाई",
+            "gu-firstName": "વૈશાલી",
+            "gu-middleName": "કેટનકુમાર",
+            "gu-lastName": "જવાઈ",
+            "gender": "female",
+            "dateOfBirth": "1988-02-20",
+            "dateOfDeath": null,
+            "maritalStatus": "married",
+            "photo": "assets/images/FalduFamilyPhotos/VaishaliJavia.png",
+            "spouse": [
+                {
+                    "en-firstName": "KetanKumar",
+                    "en-middleName": "RanchorDas",
+                    "en-lastName": "Javia",
+                    "hi-firstName": "केतनकुमार",
+                    "hi-middleName": "रनचर",
+                    "hi-lastName": "जवाई",
+                    "gu-firstName": "કેટનકુમાર",
+                    "gu-middleName": "રનચર",
+                    "gu-lastName": "જવાઈ",
+                    "gender": "male",
+                    "photo": "https://media.licdn.com/dms/image/v2/C5603AQEphsC3H3-7SQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1654976847419?e=1753315200&v=beta&t=sSLgiYxF8oAs586Pl0HioPgpgD3Yu6qYSofXkJcI3Wk",
+                    "dateOfBirth": "1977-08-07",
+                    "dateOfDeath": null,
+                    "startOfMarriage": "2004-01-20",
+                    "endOfMarriage": null
+                }
+            ],
+            "socialNetworks": [
+                {
+                    "facebook": {
+                        "title": "Devang Personal",
+                        "url": "https://facebook.com/devang.patel.88"
+                    },
+                    "instagram": {
+                        "title": "Devang Personal",
+                        "url": "https://instagram.com/devang_photography"
+                    }
+                }
+            ]
+        }
+    ]
+}
